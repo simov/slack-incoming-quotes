@@ -1,5 +1,5 @@
 npm-debug.log
 config/db.json
-config/index.json
+config/config.json
 coverage/
 node_modules/

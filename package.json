@@ -15,10 +15,13 @@
     "@request/client": "^0.1.0"
   },
   "devDependencies": {},
-  "main": "",
+  "bin": {
+    "slack-webhook-quotes": "./bin/"
+  },
+  "main": "./lib/",
   "files": [],
   "scripts": {},
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   }
 }
