@@ -1,15 +1,17 @@
 {
-  "name": "incoming-webhooks",
-  "version": "0.0.0",
-  "description": "Incoming WebHooks",
-  "private": true,
-  "keywords": [],
+  "name": "slack-incoming-quotes",
+  "version": "1.0.0",
+  "description": "Slack Incoming WebHook with Quotes",
+  "keywords": [
+    "slack",
+    "quotes"
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/simov/slack",
+  "homepage": "https://github.com/simov/slack-incoming-quotes",
   "author": "Simeon Velichkov <simeonvelichkov@gmail.com> (https://simov.github.io)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/simov/slack.git"
+    "url": "https://github.com/simov/slack-incoming-quotes.git"
   },
   "dependencies": {
     "@request/client": "^0.1.0",
@@ -17,10 +19,15 @@
   },
   "devDependencies": {},
   "bin": {
-    "slack-webhook-quotes": "./bin/"
+    "slack-incoming-quotes": "./bin/"
   },
   "main": "./lib/",
-  "files": [],
+  "files": [
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {},
   "engines": {
     "node": ">=6.0.0"
