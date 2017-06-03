@@ -1,7 +1,7 @@
 
 # slack-incoming-quotes
 
-Slack Incoming WebHook for Quotes
+Slack Incoming WebHook with Quotes
 
 
 # Install
