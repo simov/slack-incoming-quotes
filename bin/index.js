@@ -7,6 +7,7 @@ if (argv.help) {
   console.log('--config path/to/config.json')
   console.log('--db path/to/db.json')
   console.log('--quotes path/to/quotes.json')
+  console.log('--next serial|random')
   process.exit()
 }
 
@@ -17,12 +18,16 @@ if (argv.help) {
   }
 })
 
+if (!argv.next) {
+  console.error('Specify --next serial|random')
+  process.exit()
+}
+
 
 var path = require('path')
 
 
 var env = process.env.NODE_ENV || argv.env || 'development'
-
 var config = require(path.resolve(process.cwd(), argv.config))[env]
 
 var dbpath = path.resolve(process.cwd(), argv.db)
@@ -33,7 +38,7 @@ var quotes = require(path.resolve(process.cwd(), argv.quotes))
 
 var hook = require('../')
 
-hook({env, config, db, dbpath, quotes})
+hook({env, config, db, dbpath, quotes, next: argv.next})
   .then((responses) => {
     responses.forEach(([res, body]) => {
       console.log(new Date().toString(), res.statusCode, body)
