@@ -46,7 +46,9 @@ hook({
 })
 .then((responses) => {
   responses.forEach(([res, body]) => {
-    console.log(new Date().toString(), res.statusCode, body)
+    res.statusCode === 200
+      ? console.log(hook.log(res, body))
+      : console.error(new Error(hook.log(res, body)))
   })
 })
 .catch((err) => console.error(new Date().toString(), err))
